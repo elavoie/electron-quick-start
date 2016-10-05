@@ -25,7 +25,8 @@
 
     // You can also require other files to run in this process
     var fs = require('fs');
-    editor.setValue(fs.readFileSync('index.html').toString())
+    var path = require('path');
+    editor.setValue(fs.readFileSync(path.join(__dirname, 'index.html')).toString())
 </script>
 </body>
 </html>
